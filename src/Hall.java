@@ -5,39 +5,54 @@ import java.util.*;
  * 
  */
 public class Hall {
-
+	//Hall fields
+	private int hallNum;
+	private String name;
+	private Address address;
+	private String contact;
+	private ArrayList<Room> roomList:
 	/**
 	 * Default constructor
 	 */
-	public Hall() {
+	public Hall() { }
+
+	public Hall(int number, String name, Address address, String contact, ArrayList<Room> roomlist){
+		this.number = hallNum;
+		this.name = name;
+		this.address;
+		this.contact = contact;
+		this.roomlist = roomList;
 	}
 
-	/**
-	 * 
-	 */
-	private int hallNum;
+	public int getNumber(){
+		return hallNum
+	}
 
-	/**
-	 * 
-	 */
-	private String name;
+	public String getName(){
+		return name
+	}
 
-	/**
-	 * 
-	 */
-	private Address address;
+	public Address getAddress(){
+		return address;
+	}
 
-	/**
-	 * 
-	 */
-	private String contact;
+	public String getContact() {
+		return contact;
+	}
 
-	/**
-	 * 
-	 */
-	private Set<Room> rooms;
+	public ArrayList<Room> getRoomList() {
+		return roomList;
+	}
 
+	public addRoom(){
+		Scanner sc = new Scanner(System.in);
+		System.out.printf("Please enter a room number:\n>>");
+		num = int(sc.nextln());
+		System.out.printf("Please enter a room title:\n>>");
+		t = String(sc.nextln());
+		System.out.printf("Please enter a room capacity:\n>>");
+		cap = int(sc.nextln());
 
-
-
+		getRoomList().add(new Room(num, t, new ArrayList<Student>(), new RA(), cap));
+	}
 }
