@@ -1,3 +1,4 @@
+package com.backEnd;
 
 public enum Parish {
 	KingstonStAndrew("Kingston and St. Andrew"),

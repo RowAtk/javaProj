@@ -1,4 +1,4 @@
-package com.company;
+package com.backEnd;
 
 public class Main {
 
