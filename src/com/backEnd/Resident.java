@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class Resident {
 	//Resident Fields
-	public static String id = 0;
+	public static int id = 0;
 	private String name;
 	private House house;
 	private String contact;
@@ -15,18 +15,18 @@ public class Resident {
 	/**
 	 * Default constructor
 	 */
-	//public Resident() { }
+	public Resident() { }
 
 	public Resident(String name, String house, String contact){
 		setId(nextID());
 		this.name = name;
-		this.house = house;
+		this.house = House.findByName(house);
 		this.contact = contact;
 
 	}
 
-	public static nextID(){
-		return getId()++;
+	public static int nextID(){
+		return getId() + 1;
 	}
 
 	public String getContact() {
@@ -34,10 +34,10 @@ public class Resident {
 	}
 
 	public String getHouse() {
-		return house;
+		return house.strname();
 	}
 
-	public static String getId() {
+	public static int getId() {
 		return id;
 	}
 
@@ -54,10 +54,10 @@ public class Resident {
 	}
 
 	public void setHouse(String house) {
-		this.house = house;
+		this.house = House.findByName(house);
 	}
 
-	public static void setId(String id) {
+	public static void setId(int id) {
 		Resident.id = id;
 	}
 
@@ -68,7 +68,7 @@ public class Resident {
 				"House: " + getHouse() +
 				"Contact: " + getContact() + nl;
 
-		return res
+		return res;
 
 
 	}

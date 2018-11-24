@@ -9,31 +9,31 @@ public class Hall {
 	//Hall fields
 	private int hallNum;
 	private String name;
-	private Address address;
+	private String address;
 	private String contact;
-	private ArrayList<Room> roomList:
+	private ArrayList<Room> roomList;
 	/**
 	 * Default constructor
 	 */
 	public Hall() { }
 
-	public Hall(int number, String name, Address address, String contact, ArrayList<Room> roomlist){
-		this.number = hallNum;
+	public Hall(int number, String name, String address, String contact, ArrayList<Room> roomlist){
+		this.hallNum = hallNum;
 		this.name = name;
-		this.address;
+		this.address = address;
 		this.contact = contact;
-		this.roomlist = roomList;
+		this.roomList = roomList;
 	}
 
 	public int getNumber(){
-		return hallNum
+		return hallNum;
 	}
 
 	public String getName(){
-		return name
+		return name;
 	}
 
-	public Address getAddress(){
+	public String getAddress(){
 		return address;
 	}
 
@@ -45,14 +45,14 @@ public class Hall {
 		return roomList;
 	}
 
-	public addRoom(){
+	public void addRoom(){
 		Scanner sc = new Scanner(System.in);
 		System.out.printf("Please enter a room number:\n>>");
-		num = int(sc.nextln());
+		int num = sc.nextInt();
 		System.out.printf("Please enter a room title:\n>>");
-		t = String(sc.nextln());
+		String t = sc.next();
 		System.out.printf("Please enter a room capacity:\n>>");
-		cap = int(sc.nextln());
+		int cap = sc.nextInt();
 
 		getRoomList().add(new Room(num, t, new ArrayList<Student>(), new RA(), cap));
 	}

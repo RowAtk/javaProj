@@ -29,7 +29,7 @@ public class Room {
 	}
 
 	public int getNumber(){
-		return this.number
+		return this.number;
 	}
 
 	public String getTitle() {
@@ -52,7 +52,7 @@ public class Room {
 		return occupants;
 	}
 
-	public getOccupancy(){
+	public int getOccupancy(){
 		return getOccupants().size();
 	}
 
@@ -80,7 +80,7 @@ public class Room {
 		this.title = title;
 	}
 
-	public showMembers(){
+	public void showMembers(){
 		for (Student member: getOccupants()
 		     ) {
 			System.out.println(member);

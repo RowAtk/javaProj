@@ -11,14 +11,14 @@ public enum House{
 	Bishop("Bishop"),
 	Rodgers("Rodgers"),
 	Lushington("Lushington"),
-	Default("Default")
+	Default("Default");
 
 	private final String name;
 	House(String tag){
 		this.name = tag;
 	}
 
-	public String name(){
+	public String strname(){
 		return this.name;
 	}
 

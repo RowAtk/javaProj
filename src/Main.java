@@ -1,3 +1,6 @@
+import com.backEnd.*;
+import com.frontEnd.*;
+
 public class Main{
 
 	public static MainFrame UI;

@@ -14,7 +14,7 @@ public class RA {
 	/**
 	 * Default constructor
 	 */
-	//public RA() { }
+	public RA() { }
 
 	public RA(String title, String employee, String position){
 		this.title = title;
